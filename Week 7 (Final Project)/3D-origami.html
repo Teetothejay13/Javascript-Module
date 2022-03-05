@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Operation Origami 3D Origami Page</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://cdn.glitch.com/ee0a5939-d6e5-4160-98f5-cabeda94d833%2Fswan%20(1).png?v=1615912245051"/>
+    <link rel="stylesheet" href="style.css">
+    <script src = "3D-origami.js" defer></script>
+
+  </head>
+  
+  <body>
+    <div class = "content">
+      <header>
+      
+        <div class="logo-box"><img src = "https://cdn.glitch.com/ee0a5939-d6e5-4160-98f5-cabeda94d833%2F78yqiWm.png?v=1616536554919" class = "logo-box-img" alt = "Operation Origami Logo"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="forms.html">Form</a></li>
+                <li><a href="normal-origami.html">Normal Origami</a></li>
+                <li><a href="3D-origami.html">3D Origami</a></li>
+            </ul>
+        </nav>
+      </header>
+      <main id = "main">
+      <div class = "three-d-grid">
+        
+        <h2 class = "three-d-welcome-header">3D Origami</h2>
+        <p class = "three-d-intro-paragraph">Here, you’ll find more complex origami projects. These ones tend to be harder than anything else posted, and they will often take far 
+          longer to complete. Only take on these projects if you have some experience in paper folding, as well as plenty of time on your hands. In order to make many of these 
+          projects, you will need to know how to make the basic pieces. Visit this tutorial to learn how: <a href="https://youtu.be/ZAuKJmkxj44">https://youtu.be/ZAuKJmkxj44</a></p>
+        
+        <h2 class = "three-d-entry-header-1">Miraculous Ladybug and Cat Noir</h2>
+        <p class = "three-d-entry-paragraph-1">These models are characters in the popular french cartoon Miraculous Ladybug and Cat Noir. They take about 140 pieces each and a few hours to make, 
+          not including the facial details. I designed and folded the models for a relative who is a fan of the show, so there is no tutorial for these models.</p>
+        <img src = "https://cdn.glitch.com/ee0a5939-d6e5-4160-98f5-cabeda94d833%2F20180826_163556.jpg?v=1615920563867" class = "three-d-entry-image-1" alt = "miraculous ladybug and cat noir">
+        
+        <h2 class = "three-d-entry-header-2">Large Swan</h2>
+        <p class = "three-d-entry-paragraph-2">This project is one of the biggest I’ve completed. It took over 1500 pieces, and nearly a month of folding to make. I only had a little 
+          time each day, but if you have more time on your hands then you could make this in a shorter time period. One note I’d like to make is that the tutorial won’t get you this 
+          exact result, seeing as I took some creative liberties when making it. The tutorial will only give you a similar product.<br><br>Tutorial: <a href="https://www.youtube.com/watch?v=uC9Xgcy3acI">https://www.youtube.com/watch?v=uC9Xgcy3acI</a></p>
+        <img src = "https://cdn.glitch.com/ee0a5939-d6e5-4160-98f5-cabeda94d833%2F20210304_221337.jpg?v=1615920709915" class = "three-d-entry-image-2" alt = "large swan">
+        
+        <h2 class = "three-d-entry-header-3">Spiderman</h2>
+        <p class = "three-d-entry-paragraph-3">This model is of Marvel's famous character Spiderman. It took around 130 pieces and a couple hours of my time to make, not including facial details.
+        The spider logo on the chest was rather hard to cut out, but I was able to manage it with an exacto knife. I designed and folded this model myself, so there is no tutorial for this model.
+        However, there are tutorials to make similar models on youtube.</p>
+        <img src = "https://cdn.glitch.com/ee0a5939-d6e5-4160-98f5-cabeda94d833%2F20181128_203641.jpg?v=1615914072518" class = "three-d-entry-image-3" alt = "spiderman">
+        
+        <!-- 
+        Note: this is the template for each entry
+        <h2 class = "three-d-entry-header-4"></h2>
+        <p class = "three-d-entry-paragraph-4"></p>
+        <img src = "" class = "three-d-entry-image-4" alt = "">
+        -->
+        
+        <h2 class = "three-d-end-header">Want to show off your projects too?</h2>
+        <p class = "three-d-end-paragraph">Send us an email at (email) with photos, a description, and a link to a tutorial and we’ll review it for our site!</p>
+        
+        <div class = "three-d-form">
+          <div id="feedback"></div>
+    <form action="/my-handling-form-page" method="post">
+   <ul class = "three-d-form-list">
+  <li>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name">
+  </li>
+  <li>
+    <label for="mail">E-mail:</label>
+    <input type="email" id="mail" name="user_email">
+  </li>
+  <li>
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </li>
+  <li class="three-d-button">
+    <button type="submit">Send your message</button>
+  </li>
+ </ul>
+    </form>
+    <script>
+    // get the feedback div element so we can do something with it.
+    const feedbackElement = document.getElementById('feedback');
+    // get the form so we can read what was entered in it.
+    const formElement = document.forms[0];
+    // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+    formElement.addEventListener('submit', function(e) {
+        // stop the form from doing the default action
+        e.preventDefault();
+        // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+        feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+        // make the feedback element visible.
+        feedbackElement.style.display = "block";
+        // add a class to move everything down so our message doesn't cover it.
+        document.body.classList.toggle('moveDown');
+    });
+</script>
+        </div>
+        
+      </div>
+      <button class = "threeDShowOtherProjects" id = "threeDShowOtherProjects">Show Me Other Projects</button>
+      </main>
+      <footer>
+        <p class = "copyright">&copy; 2021 Operation Origami - TJ - Putnam - WDD 130-04</p>
+        <div class = "social">
+          <a href = "https://www.etsy.com"><img src = "https://cdn.glitch.com/ee0a5939-d6e5-4160-98f5-cabeda94d833%2Fetsy-icon-128.png?v=1615912757572" class = "etsy" alt = "Social 1"></a>
+          <a href = "https://www.youtube.com/"><img src = "https://cdn.glitch.com/62acf411-aa7f-4606-9685-a36e1b163fba%2Fyoutube.png?v=1612301585610" alt = "Social 2"></a>
+          <a href = "https://www.facebook.com"><img src = "https://cdn.glitch.com/62acf411-aa7f-4606-9685-a36e1b163fba%2Ffacebook.png?v=1612301589188" alt = "Social 3"></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+    
+  
+</html>

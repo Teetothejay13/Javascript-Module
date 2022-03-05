@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Operation Origami Normal Origami Page</title>
+    <link rel="shortcut icon" type="image/jpg" href="https://cdn.glitch.com/ee0a5939-d6e5-4160-98f5-cabeda94d833%2Fswan%20(1).png?v=1615912245051"/>
+    <link rel="stylesheet" href="style.css">
+    <script src = "normal-origami.js" defer></script>
+  </head>
+  
+  <body>
+    <div class = "content">
+      <header>
+      
+        <div class="logo-box"><img src = "https://cdn.glitch.com/ee0a5939-d6e5-4160-98f5-cabeda94d833%2F78yqiWm.png?v=1616536554919" class = "logo-box-img" alt = "Operation Origami Logo"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="forms.html">Form</a></li>
+                <li><a href="normal-origami.html">Normal Origami</a></li>
+                <li><a href="3D-origami.html">3D Origami</a></li>
+            </ul>
+        </nav>
+      </header>
+      <main id = "main">
+      <div class = "normal-grid">
+        
+        <h2 class = "normal-welcome-header">Normal Origami</h2>
+        <p class = "normal-intro-paragraph">Here, you’ll find your average, every day origami. If you’re just starting out in the world of origami, or just looking for something easy to do, check out some of these projects.
+          Most if not all of these projects have comprehensive tutorials that will help you fold to your heart's desire. With the skills you learn from these projects, you'll be able to manage pretty much anything.
+          Of course, once you have enough practice with this level of origami, you should be ready to poke around in some of the 3D origami.</p>
+        
+        <h2 class = "normal-entry-header-1">Simple Turtles</h2>
+        <p class = "normal-entry-paragraph-1">These turtles are an adorable little project you can do in 5-10 minutes. They can be any size you want, and are fairly easy to make. Definitely beginner friendly, and good for when you 
+          don’t have a lot of time on your hands.<br><br>Tutorial: <a href="https://www.youtube.com/watch?v=LbUI7lqO5t0">https://www.youtube.com/watch?v=LbUI7lqO5t0</a></p>
+        <img src = "https://cdn.glitch.com/ee0a5939-d6e5-4160-98f5-cabeda94d833%2F20191110_183614.jpg?v=1615914076405" class = "normal-entry-image-1" alt = "origami turtles">
+        
+        <h2 class = "normal-entry-header-2">Sitting Fairy</h2>
+        <p class = "normal-entry-paragraph-2">This fairy is a bit harder of a project. It requires some precise folds and a bit of patience, so take this project on if you’re looking for a bit of a challenge. This project takes about 45 minutes to an hour, so make 
+          sure you have time to finish it before you begin.<br><br>Tutorial: <a href="https://www.youtube.com/watch?v=ySSTMeOQLKc">https://www.youtube.com/watch?v=ySSTMeOQLKc</a></p>
+        <img src = "https://cdn.glitch.com/ee0a5939-d6e5-4160-98f5-cabeda94d833%2F20200304_203155.jpg?v=1614742208011" class = "normal-entry-image-2" alt = "origami fairy">
+        
+        <h2 class = "normal-entry-header-3">String of Cranes</h2>
+        <p class = "normal-entry-paragraph-3">This project is pretty easy, but it might take more time than some of the others. This string of cranes is part of something called a Senbazuru, which
+        means "1000 cranes" in Japanese. There is a Japanese legend that says if you fold 1000 paper cranes, then the gods will grant you a wish. I wanted to do this, and this is
+        part of the Senbazuru that I made. All you have to do is learn how to fold an origami crane, and then do it over and over again.<br><br>Tutorial: <a href="https://www.youtube.com/watch?v=KfnyopxdJXQ">https://www.youtube.com/watch?v=KfnyopxdJXQ</a></p>
+        <img src = "https://cdn.glitch.com/ee0a5939-d6e5-4160-98f5-cabeda94d833%2F20210304_221652.jpg?v=1615919432076" class = "normal-entry-image-3" alt = "string of origami cranes">
+        
+        <!-- 
+        Note: this is the template for each entry
+        <h2 class = "normal-entry-header-4"></h2>
+        <p class = "normal-entry-paragraph-4"></p>
+        <img src = "" class = "normal-entry-image-4" alt = "">
+        -->
+        
+        <h2 class = "normal-end-header">Want to show off your projects too?</h2>
+        <p class = "normal-end-paragraph">Send us an email at (email) with photos, a description, and a link to a tutorial and we’ll review it for our site!</p>
+        
+        <div class = "normal-form">
+          <div id="feedback"></div>
+    <form action="/my-handling-form-page" method="post">
+   <ul class = "normal-form-list">
+  <li>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name">
+  </li>
+  <li>
+    <label for="mail">E-mail:</label>
+    <input type="email" id="mail" name="user_email">
+  </li>
+  <li>
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </li>
+  <li class="normal-button">
+    <button type="submit">Send your message</button>
+  </li>
+ </ul>
+    </form>
+    <script>
+    // get the feedback div element so we can do something with it.
+    const feedbackElement = document.getElementById('feedback');
+    // get the form so we can read what was entered in it.
+    const formElement = document.forms[0];
+    // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+    formElement.addEventListener('submit', function(e) {
+        // stop the form from doing the default action
+        e.preventDefault();
+        // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+        feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+        // make the feedback element visible.
+        feedbackElement.style.display = "block";
+        // add a class to move everything down so our message doesn't cover it.
+        document.body.classList.toggle('moveDown');
+    });
+</script>
+    </div>
+      <!--Here we will enter in all the other projects via a script-->
+      <button class = "showOtherProjects" id = "showProjectsButton">Show Me Other Projects</button>
+      
+      </main>
+      <footer>
+        <p class = "copyright">&copy; 2021 Operation Origami - TJ - Putnam</p>
+        <div class = "social">
+          <a href = "https://www.etsy.com"><img src = "https://cdn.glitch.com/ee0a5939-d6e5-4160-98f5-cabeda94d833%2Fetsy-icon-128.png?v=1615912757572" class = "etsy" alt = "Social 1"></a>
+          <a href = "https://www.youtube.com/"><img src = "https://cdn.glitch.com/62acf411-aa7f-4606-9685-a36e1b163fba%2Fyoutube.png?v=1612301585610" alt = "Social 2"></a>
+          <a href = "https://www.facebook.com"><img src = "https://cdn.glitch.com/62acf411-aa7f-4606-9685-a36e1b163fba%2Ffacebook.png?v=1612301589188" alt = "Social 3"></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+    
+  
+</html>
