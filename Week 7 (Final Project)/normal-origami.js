@@ -26,6 +26,7 @@ async function showOtherProjects(){
     `;
     // Lastly, we need to adjust the margin for the image, so that it doesn't overlap the title
     document.getElementById("origamiHeartImage").style.marginTop = "40px";
+    document.getElementById("origamiHeartImage").style.justifySelf = "center";
     // Lastly lastly, we need to get rid of the button
     var buttonElement = document.getElementById("showProjectsButton");
     buttonElement.parentNode.removeChild(buttonElement);
